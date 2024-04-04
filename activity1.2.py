@@ -38,9 +38,9 @@ plt.plot(x, relu_y, label='ReLU', color='blue')
 plt.plot(x, leaky_relu_y, label='Leaky ReLU', color='green')
 plt.plot(x, tanh_y, label='Tanh', color='red')
 
-plt.scatter(random_values, relu_values, color='blue')
-plt.scatter(random_values, leaky_relu_values, color='green')
-plt.scatter(random_values, tanh_values, color='red')
+plt.scatter(random_values, relu_values, color='blue', label='Data (ReLU)', zorder=5)
+plt.scatter(random_values, leaky_relu_values, color='green', label='Data (Leaky ReLU)', zorder=5)
+plt.scatter(random_values, tanh_values, color='red', label='Data (Tanh)', zorder=5)
 
 plt.title('Activation Functions')
 plt.xlabel('x')
@@ -48,3 +48,4 @@ plt.ylabel('y')
 plt.legend()
 plt.grid(True)
 plt.show()
+
